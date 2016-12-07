@@ -1,0 +1,158 @@
+/****** Vendor Imports ******/
+/********** Setup ***********/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+body {
+  height: 100vh;
+  line-height: 1;
+  width: 100vw; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+*, *:before, *:after {
+  box-sizing: border-box; }
+
+body {
+  background: url("../../images/brickwall.png"); }
+
+/***** Site Components ******/
+header {
+  background: #823352;
+  display: flex;
+  justify-content: space-between;
+  height: 90px; }
+  header h1 {
+    color: white;
+    font-family: "Pacifico", cursive;
+    font-size: 42px;
+    line-height: 90px;
+    margin-left: 40px; }
+  header .nav-bar {
+    display: flex;
+    font-family: "Montserrat", sans-serif;
+    font-size: 25px;
+    justify-content: space-between;
+    line-height: 90px;
+    margin-right: 40px; }
+    header .nav-bar li {
+      margin-left: 50px; }
+      header .nav-bar li a {
+        text-decoration: none;
+        color: #afdcf8; }
+        header .nav-bar li a:hover {
+          color: white; }
+
+.work-container {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column; }
+  .work-container h3 {
+    align-self: center;
+    border-top: 2px solid #333;
+    border-bottom: 2px solid #333;
+    display: inline;
+    font-family: "Montserrat", sans-serif;
+    color: #333;
+    font-weight: 900;
+    font-size: 60px;
+    line-height: 80px;
+    letter-spacing: 0.2em;
+    margin: 40px 0 20px 0;
+    padding: 15px 0;
+    text-align: center; }
+  .work-container .work-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: all 0.5s ease; }
+  .work-container .work {
+    position: relative;
+    border: 6px solid #afdcf8;
+    border-radius: 3px;
+    width: 50%; }
+    .work-container .work .triangle {
+      width: 0;
+      height: 0;
+      position: absolute;
+      border-style: solid; }
+      .work-container .work .triangle.right {
+        border-width: 25px 0 25px 20px;
+        border-color: transparent transparent transparent #afdcf8; }
+      .work-container .work .triangle.left {
+        border-width: 25px 20px 25px 0;
+        border-color: transparent #afdcf8 transparent transparent; }
+  .work-container .work.codekarma {
+    background: url("../../images/codekarma.png") no-repeat;
+    background-size: cover; }
+    .work-container .work.codekarma .triangle.right {
+      top: 30px;
+      right: -21px; }
+  .work-container .work.hatchery {
+    align-self: right;
+    background: url("../../images/hatchery.png") no-repeat;
+    background-size: cover; }
+    .work-container .work.hatchery .triangle.left {
+      top: 30px;
+      left: -21px; }
+  .work-container .project-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px; }
+    .work-container .project-container .project-details {
+      font-family: "Montserrat", sans-serif;
+      text-align: justify;
+      height: 250px;
+      width: 45%;
+      position: relative; }
+      .work-container .project-container .project-details .title {
+        margin: 10px 0 20px 0;
+        font-size: 30px; }
+      .work-container .project-container .project-details .description {
+        margin-top: 30px;
+        line-height: 20px; }
+      .work-container .project-container .project-details .skills {
+        text-align: center;
+        position: absolute;
+        line-height: 30px;
+        color: #823352;
+        bottom: 15px; }
+
+img.project {
+  width: 60%;
+  border: 6px solid #afdcf8;
+  border-radius: 3px;
+  position: relative; }
+
+/*# sourceMappingURL=main.css.map */

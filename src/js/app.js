@@ -12,15 +12,15 @@
           abstract: true,
           template: '<ui-view></ui-view>'
       }).state('PortfolioParent.about', {
-          url: '/about',
+          url: 'about',
           // controller: 'HomeController as home',
           templateUrl: 'src/templates/about.html'
       }).state('PortfolioParent.contact', {
-          url: '/contact',
+          url: 'contact',
           // controller: 'AllProjectsController as allProjects',
           templateUrl: 'src/templates/contact.html'
       }).state('PortfolioParent.work', {
-          url: '/work',
+          url: 'work',
           // controller: 'ClientDashboardController as clientDashboard',
           templateUrl: 'src/templates/work.html'
       });

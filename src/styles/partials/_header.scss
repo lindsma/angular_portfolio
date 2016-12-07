@@ -1,0 +1,39 @@
+header {
+    background: $plum;
+    display: flex;
+    justify-content: space-between;
+    height: 90px;
+
+    h1 {
+        color: white;
+        // font-family: $mont;
+        font-family: $pacifico;
+        font-size: 42px;
+        // font-weight: bold;
+        // letter-spacing: 2px;
+        line-height: 90px;
+        margin-left: 40px;
+    }
+
+    .nav-bar {
+        display: flex;
+        font-family: $mont;
+        font-size: 25px;
+        justify-content: space-between;
+        line-height: 90px;
+        margin-right: 40px;
+
+        li {
+          margin-left: 50px;
+
+          a {
+            text-decoration: none;
+            color: $sail;
+
+            &:hover {
+              color: white;
+            }
+          }
+        }
+    }
+}
