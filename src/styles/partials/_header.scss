@@ -6,13 +6,14 @@ header {
 
     h1 {
         color: white;
-        // font-family: $mont;
         font-family: $pacifico;
         font-size: 42px;
-        // font-weight: bold;
-        // letter-spacing: 2px;
         line-height: 90px;
         margin-left: 40px;
+
+        &:hover {
+          cursor: pointer;
+        }
     }
 
     .nav-bar {
@@ -29,9 +30,15 @@ header {
           a {
             text-decoration: none;
             color: $sail;
+            padding-bottom: 5px;
 
             &:hover {
               color: white;
+            }
+
+            &.active {
+              color: white;
+              border-bottom: 5px solid $sail;
             }
           }
         }
@@ -41,7 +48,6 @@ header {
 .header-container {
     display: flex;
     margin-top: 40px;
-    width: 90%;
     margin: 40px auto 0 auto;
 
     h3 {
@@ -60,6 +66,7 @@ header {
         align-self: center;
         border: 0;
         height: 0;
+        width: 25%;
         border-top: 1px solid rgba(0, 0, 0, 0.2);
         border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 

@@ -58,6 +58,8 @@ header {
     font-size: 42px;
     line-height: 90px;
     margin-left: 40px; }
+    header h1:hover {
+      cursor: pointer; }
   header .nav-bar {
     display: flex;
     font-family: "Montserrat", sans-serif;
@@ -69,14 +71,17 @@ header {
       margin-left: 50px; }
       header .nav-bar li a {
         text-decoration: none;
-        color: #afdcf8; }
+        color: #9FCFD5;
+        padding-bottom: 5px; }
         header .nav-bar li a:hover {
           color: white; }
+        header .nav-bar li a.active {
+          color: white;
+          border-bottom: 5px solid #9FCFD5; }
 
 .header-container {
   display: flex;
   margin-top: 40px;
-  width: 90%;
   margin: 40px auto 0 auto; }
   .header-container h3 {
     align-self: center;
@@ -92,6 +97,7 @@ header {
     align-self: center;
     border: 0;
     height: 0;
+    width: 25%;
     border-top: 1px solid rgba(0, 0, 0, 0.2);
     border-bottom: 1px solid rgba(255, 255, 255, 0.3); }
     .header-container hr.header.one {
@@ -99,22 +105,57 @@ header {
     .header-container hr.header.two {
       margin-right: 0; }
 
-.contact-container hr.header {
-  width: 27%; }
-.contact-container h1 {
-  font-size: 60px;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 900;
-  letter-spacing: 0.2em;
-  text-align: center;
-  padding-top: 30px; }
-.contact-container hr {
-  margin-top: 25px;
-  width: 60%;
-  border: 0;
-  height: 0;
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3); }
+.about-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  width: 90%; }
+  .about-container .header-container {
+    width: 100%; }
+  .about-container .info-container {
+    display: flex;
+    justify-content: center; }
+    .about-container .info-container .about-description {
+      align-self: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      margin: 40px 0 40px 80px; }
+      .about-container .info-container .about-description p {
+        align-self: center;
+        font-family: "Montserrat", sans-serif;
+        font-size: 18px;
+        line-height: 27px; }
+        .about-container .info-container .about-description p.personal {
+          margin-top: 20px; }
+      .about-container .info-container .about-description .resume {
+        align-self: center;
+        background: rgba(255, 255, 255, 0.9);
+        border: 2px solid #333;
+        color: #823352;
+        font-family: "Montserrat", sans-serif;
+        font-size: 18px;
+        height: 40px;
+        margin-top: 40px;
+        opacity: .8;
+        width: 130px; }
+        .about-container .info-container .about-description .resume:hover {
+          background: rgba(130, 51, 82, 0.9);
+          border: 2px solid white;
+          border-radius: 10px;
+          color: white;
+          cursor: pointer; }
+    .about-container .info-container img.profile {
+      align-self: center;
+      border-radius: 50%;
+      height: 350px;
+      margin: 40px 0;
+      opacity: 0.8;
+      box-shadow: 0 3px 2px rgba(0, 0, 0, 0.3); }
+
+.contact-container .header-container {
+  width: 90%; }
 .contact-container .contact {
   display: flex;
   justify-content: center;
@@ -132,7 +173,7 @@ header {
     border-radius: 5px;
     display: flex;
     justify-content: center;
-    transition: all .75s ease;
+    transition: all 0.75s ease;
     position: relative; }
     .contact-container .contact .icon-container:hover {
       border: 3px solid #823352;
@@ -159,15 +200,25 @@ header {
       height: 40px;
       font-size: 20px; }
     .contact-container .contact form .submit {
-      width: 60px;
-      height: 40px;
-      margin-top: 20px;
       align-self: flex-end;
-      border-radius: 5px;
-      border: none; }
+      background: rgba(255, 255, 255, 0.9);
+      border: 2px solid #333;
+      color: #823352;
+      font-family: "Montserrat", sans-serif;
+      font-size: 18px;
+      height: 40px;
+      margin: 40px 0;
+      opacity: 0.8;
+      width: 130px; }
+      .contact-container .contact form .submit:hover {
+        background: rgba(130, 51, 82, 0.9);
+        border: 2px solid white;
+        border-radius: 10px;
+        color: white;
+        cursor: pointer; }
 
-.work-main-container hr.header {
-  width: 33%; }
+.work-main-container .header-container {
+  width: 90%; }
 
 .work-container {
   width: 90%;
@@ -176,7 +227,7 @@ header {
   flex-direction: column; }
   .work-container .work {
     position: relative;
-    border: 6px solid #afdcf8;
+    border: 6px solid #9FCFD5;
     border-radius: 3px;
     width: 500px;
     -webkit-box-shadow: 0 8px 6px -6px black;
@@ -189,10 +240,10 @@ header {
       border-style: solid; }
       .work-container .work .triangle.right {
         border-width: 25px 0 25px 20px;
-        border-color: transparent transparent transparent #afdcf8; }
+        border-color: transparent transparent transparent #9FCFD5; }
       .work-container .work .triangle.left {
         border-width: 25px 20px 25px 0;
-        border-color: transparent #afdcf8 transparent transparent; }
+        border-color: transparent #9FCFD5 transparent transparent; }
   .work-container .work.codekarma {
     background: url("../../images/codekarma.png") no-repeat;
     background-size: cover; }

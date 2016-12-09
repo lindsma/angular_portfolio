@@ -11,17 +11,17 @@
           url: '/',
           abstract: true,
           template: '<ui-view></ui-view>'
+      }).state('PortfolioParent.home', {
+          url: 'home',
+          templateUrl: 'src/templates/home.html'
       }).state('PortfolioParent.about', {
           url: 'about',
-          // controller: 'HomeController as home',
           templateUrl: 'src/templates/about.html'
       }).state('PortfolioParent.contact', {
           url: 'contact',
-          // controller: 'AllProjectsController as allProjects',
           templateUrl: 'src/templates/contact.html'
       }).state('PortfolioParent.work', {
           url: 'work',
-          // controller: 'ClientDashboardController as clientDashboard',
           templateUrl: 'src/templates/work.html'
       });
 
