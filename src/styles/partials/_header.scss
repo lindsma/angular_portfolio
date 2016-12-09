@@ -37,3 +37,38 @@ header {
         }
     }
 }
+
+.header-container {
+    display: flex;
+    margin-top: 40px;
+    width: 90%;
+    margin: 40px auto 0 auto;
+
+    h3 {
+        align-self: center;
+        display: inline;
+        font-family: $mont;
+        color: #333;
+        font-weight: 900;
+        font-size: 60px;
+        line-height: 80px;
+        letter-spacing: 0.2em;
+        text-align: center;
+    }
+
+    hr.header {
+        align-self: center;
+        border: 0;
+        height: 0;
+        border-top: 1px solid rgba(0, 0, 0, 0.2);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+
+        &.one {
+          margin-left: 0
+        }
+
+        &.two {
+          margin-right: 0;
+        }
+    }
+}
