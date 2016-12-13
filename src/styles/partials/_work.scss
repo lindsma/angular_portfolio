@@ -16,6 +16,26 @@
         -webkit-box-shadow: 0 8px 6px -6px black;
         -moz-box-shadow: 0 8px 6px -6px black;
         box-shadow: 0 8px 6px -6px black;
+        transition: all .5s ease;
+
+        @include media(desktop) {
+          width: 420px;
+        }
+
+        @include media(tabletLarge) {
+          width: 380px;
+        }
+
+        @include media(tablet) {
+          height: 230px;
+          align-self: center;
+          margin-bottom: 30px;
+        }
+
+        @include media(mobile) {
+          width: 300px;
+          height: 170px;
+        }
 
         .triangle {
             width: 0;
@@ -26,39 +46,95 @@
             &.right {
                 border-width: 25px 0 25px 20px;
                 border-color: transparent transparent transparent $sail;
+                top: 30px;
+                right: -21px;
+
+                @include media(tablet) {
+                  border-width: 20px 25px 0 25px;
+                  border-color: $sail transparent transparent transparent;
+                  right: 50%;
+                  transform: translateX(50%);
+                  top: 100%;
+                }
             }
 
             &.left {
                 border-width: 25px 20px 25px 0;
                 border-color: transparent $sail transparent transparent;
+                top: 30px;
+                left: -21px;
+
+                @include media(tablet) {
+                  border-width: 20px 25px 0 25px;
+                  border-color: $sail transparent transparent transparent;
+                  left: 50%;
+                  transform: translateX(-50%);
+                  top: 100%;
+                }
             }
         }
     }
 
     .work.codekarma {
-        background: url('../../images/codekarma.png') no-repeat;
+        background: url('../../images/codekarma.png') no-repeat $sail;
         background-size: cover;
+        background-position: center;
+
+        @include media(desktop) {
+          background-size: contain;
+        }
     }
 
     .work.hatchery {
-        background: url('../../images/hatchery.png') no-repeat;
+        background: url('../../images/hatchery.png') no-repeat $sail;
         background-size: cover;
+        background-position: center;
+
+        @include media(desktop) {
+          background-size: contain;
+        }
     }
 
     .work.petsy {
-        background: url('../../images/petsy.png') no-repeat;
+        background: url('../../images/petsy.png') no-repeat $sail;
         background-size: cover;
+        background-position: center;
+
+        @include media(desktop) {
+          background-size: contain;
+        }
     }
 
     .work.brainstorm {
-        background: url('../../images/brainstorm.png') no-repeat;
+        background: url('../../images/brainstorm.png') no-repeat $sail;
         background-size: cover;
+        background-position: center;
+
+        @include media(desktop) {
+          background-size: contain;
+        }
     }
 
     .project-container {
         display: flex;
         justify-content: space-between;
         margin: 40px 0;
+
+        &:nth-of-type(even) {
+          @include media(tablet) {
+              flex-direction: column-reverse;
+            }
+        }
+
+        @include media(tablet) {
+          flex-direction: column;
+          justify-content: center;
+          margin: 40px 0 20px 0;
+        }
+
+        @include media(mobileLarge) {
+          margin-bottom: 10px;
+        }
 
         .project-details {
             font-family: $mont;
@@ -67,17 +143,51 @@
             width: 45%;
             position: relative;
 
+            @include media(desktopLarge) {
+              width: 40%;
+            }
+
+            @include media(tabletLarge) {
+              font-size: 15px;
+            }
+
+            @include media(tablet) {
+              width: 80%;
+              align-self: center;
+              height: 200px;
+            }
+
+            @include media(mobileLarge) {
+              height: 220px;
+            }
+
+            @include media(mobile) {
+              height: 240px;
+            }
+
             .title {
                 color: #333;
                 font-size: 30px;
                 font-weight: bold;
                 margin: 10px 0 20px;
+
+                @include media(tablet) {
+                  text-align: center;
+                }
             }
 
             .description {
                 color: #333;
                 line-height: 20px;
                 margin-top: 30px;
+
+                @include media(tabletLarge) {
+                  margin-top: 20px;
+                }
+
+                @include media(tablet) {
+                  text-align: justify;
+                }
             }
 
             .skills {
@@ -85,19 +195,18 @@
                 line-height: 30px;
                 color: $plum;
                 bottom: 15px;
+
+                @include media(tabletLarge) {
+                  line-height: 24px;
+                }
+
+                @include media(tablet) {
+                  text-align: center;
+                  width: 100%;
+                }
             }
         }
     }
-}
-
-.triangle.right {
-    top: 30px;
-    right: -21px;
-}
-
-.triangle.left {
-    top: 30px;
-    left: -21px;
 }
 
 hr.divider {

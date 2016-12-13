@@ -309,7 +309,23 @@ header {
     width: 500px;
     -webkit-box-shadow: 0 8px 6px -6px black;
     -moz-box-shadow: 0 8px 6px -6px black;
-    box-shadow: 0 8px 6px -6px black; }
+    box-shadow: 0 8px 6px -6px black;
+    transition: all .5s ease; }
+    @media only screen and (max-width: 1060px) {
+      .work-container .work {
+        width: 420px; } }
+    @media only screen and (max-width: 970px) {
+      .work-container .work {
+        width: 380px; } }
+    @media only screen and (max-width: 770px) {
+      .work-container .work {
+        height: 230px;
+        align-self: center;
+        margin-bottom: 30px; } }
+    @media only screen and (max-width: 460px) {
+      .work-container .work {
+        width: 300px;
+        height: 170px; } }
     .work-container .work .triangle {
       width: 0;
       height: 0;
@@ -317,54 +333,124 @@ header {
       border-style: solid; }
       .work-container .work .triangle.right {
         border-width: 25px 0 25px 20px;
-        border-color: transparent transparent transparent #9FCFD5; }
+        border-color: transparent transparent transparent #9FCFD5;
+        top: 30px;
+        right: -21px; }
+        @media only screen and (max-width: 770px) {
+          .work-container .work .triangle.right {
+            border-width: 20px 25px 0 25px;
+            border-color: #9FCFD5 transparent transparent transparent;
+            right: 50%;
+            transform: translateX(50%);
+            top: 100%; } }
       .work-container .work .triangle.left {
         border-width: 25px 20px 25px 0;
-        border-color: transparent #9FCFD5 transparent transparent; }
+        border-color: transparent #9FCFD5 transparent transparent;
+        top: 30px;
+        left: -21px; }
+        @media only screen and (max-width: 770px) {
+          .work-container .work .triangle.left {
+            border-width: 20px 25px 0 25px;
+            border-color: #9FCFD5 transparent transparent transparent;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 100%; } }
   .work-container .work.codekarma {
-    background: url("../../images/codekarma.png") no-repeat;
-    background-size: cover; }
+    background: url("../../images/codekarma.png") no-repeat #9FCFD5;
+    background-size: cover;
+    background-position: center; }
+    @media only screen and (max-width: 1060px) {
+      .work-container .work.codekarma {
+        background-size: contain; } }
   .work-container .work.hatchery {
-    background: url("../../images/hatchery.png") no-repeat;
-    background-size: cover; }
+    background: url("../../images/hatchery.png") no-repeat #9FCFD5;
+    background-size: cover;
+    background-position: center; }
+    @media only screen and (max-width: 1060px) {
+      .work-container .work.hatchery {
+        background-size: contain; } }
   .work-container .work.petsy {
-    background: url("../../images/petsy.png") no-repeat;
-    background-size: cover; }
+    background: url("../../images/petsy.png") no-repeat #9FCFD5;
+    background-size: cover;
+    background-position: center; }
+    @media only screen and (max-width: 1060px) {
+      .work-container .work.petsy {
+        background-size: contain; } }
   .work-container .work.brainstorm {
-    background: url("../../images/brainstorm.png") no-repeat;
-    background-size: cover; }
+    background: url("../../images/brainstorm.png") no-repeat #9FCFD5;
+    background-size: cover;
+    background-position: center; }
+    @media only screen and (max-width: 1060px) {
+      .work-container .work.brainstorm {
+        background-size: contain; } }
   .work-container .project-container {
     display: flex;
     justify-content: space-between;
     margin: 40px 0; }
+    @media only screen and (max-width: 770px) {
+      .work-container .project-container:nth-of-type(even) {
+        flex-direction: column-reverse; } }
+    @media only screen and (max-width: 770px) {
+      .work-container .project-container {
+        flex-direction: column;
+        justify-content: center;
+        margin: 40px 0 20px 0; } }
+    @media only screen and (max-width: 605px) {
+      .work-container .project-container {
+        margin-bottom: 10px; } }
     .work-container .project-container .project-details {
       font-family: "Montserrat", sans-serif;
       text-align: justify;
       height: 250px;
       width: 45%;
       position: relative; }
+      @media only screen and (max-width: 1130px) {
+        .work-container .project-container .project-details {
+          width: 40%; } }
+      @media only screen and (max-width: 970px) {
+        .work-container .project-container .project-details {
+          font-size: 15px; } }
+      @media only screen and (max-width: 770px) {
+        .work-container .project-container .project-details {
+          width: 80%;
+          align-self: center;
+          height: 200px; } }
+      @media only screen and (max-width: 605px) {
+        .work-container .project-container .project-details {
+          height: 220px; } }
+      @media only screen and (max-width: 460px) {
+        .work-container .project-container .project-details {
+          height: 240px; } }
       .work-container .project-container .project-details .title {
         color: #333;
         font-size: 30px;
         font-weight: bold;
         margin: 10px 0 20px; }
+        @media only screen and (max-width: 770px) {
+          .work-container .project-container .project-details .title {
+            text-align: center; } }
       .work-container .project-container .project-details .description {
         color: #333;
         line-height: 20px;
         margin-top: 30px; }
+        @media only screen and (max-width: 970px) {
+          .work-container .project-container .project-details .description {
+            margin-top: 20px; } }
+        @media only screen and (max-width: 770px) {
+          .work-container .project-container .project-details .description {
+            text-align: justify; } }
       .work-container .project-container .project-details .skills {
         position: absolute;
         line-height: 30px;
         color: #823352;
         bottom: 15px; }
-
-.triangle.right {
-  top: 30px;
-  right: -21px; }
-
-.triangle.left {
-  top: 30px;
-  left: -21px; }
+        @media only screen and (max-width: 970px) {
+          .work-container .project-container .project-details .skills {
+            line-height: 24px; } }
+        @media only screen and (max-width: 770px) {
+          .work-container .project-container .project-details .skills {
+            text-align: center;
+            width: 100%; } }
 
 hr.divider {
   border: 0;
