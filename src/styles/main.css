@@ -92,7 +92,20 @@ header {
     font-size: 60px;
     line-height: 80px;
     letter-spacing: 0.2em;
-    text-align: center; }
+    padding: 0 5px;
+    text-align: center;
+    transition: all .5s ease; }
+    @media only screen and (max-width: 770px) {
+      .header-container h3 {
+        font-size: 50px;
+        line-height: 50px; } }
+    @media only screen and (max-width: 605px) {
+      .header-container h3 {
+        font-size: 40px;
+        line-height: 40px; } }
+    @media only screen and (max-width: 460px) {
+      .header-container h3 {
+        letter-spacing: 0.1em; } }
   .header-container hr.header {
     align-self: center;
     border: 0;
@@ -104,6 +117,15 @@ header {
       margin-left: 0; }
     .header-container hr.header.two {
       margin-right: 0; }
+    @media only screen and (max-width: 970px) {
+      .header-container hr.header {
+        width: 21%; } }
+    @media only screen and (max-width: 770px) {
+      .header-container hr.header {
+        width: 18%; } }
+    @media only screen and (max-width: 605px) {
+      .header-container hr.header {
+        width: 15%; } }
 
 .about-container {
   display: flex;
@@ -112,16 +134,26 @@ header {
   margin: 0 auto;
   width: 90%; }
   .about-container .header-container {
-    width: 100%; }
+    width: 100%;
+    margin-bottom: 20px; }
   .about-container .info-container {
     display: flex;
     justify-content: center; }
+    @media only screen and (max-width: 770px) {
+      .about-container .info-container {
+        flex-direction: column; } }
     .about-container .info-container .about-description {
       align-self: center;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      margin: 40px 0 40px 80px; }
+      margin: 0 0 40px 65px; }
+      @media only screen and (max-width: 1060px) {
+        .about-container .info-container .about-description {
+          margin-top: 20px; } }
+      @media only screen and (max-width: 770px) {
+        .about-container .info-container .about-description {
+          margin: 20px 20px 40px 20px; } }
       .about-container .info-container .about-description p {
         align-self: center;
         font-family: "Montserrat", sans-serif;
@@ -129,6 +161,12 @@ header {
         line-height: 27px; }
         .about-container .info-container .about-description p.personal {
           margin-top: 20px; }
+        @media only screen and (max-width: 770px) {
+          .about-container .info-container .about-description p {
+            text-align: justify; } }
+        @media only screen and (max-width: 400px) {
+          .about-container .info-container .about-description p {
+            line-height: 25px; } }
       .about-container .info-container .about-description .resume {
         align-self: center;
         background: rgba(255, 255, 255, 0.9);
@@ -138,7 +176,8 @@ header {
         font-size: 18px;
         height: 40px;
         margin-top: 40px;
-        opacity: .8;
+        opacity: 0.8;
+        transition: all 0.5s ease;
         width: 130px; }
         .about-container .info-container .about-description .resume:hover {
           background: rgba(130, 51, 82, 0.9);
@@ -150,9 +189,22 @@ header {
       align-self: center;
       border-radius: 50%;
       height: 350px;
-      margin: 40px 0;
       opacity: 0.8;
       box-shadow: 0 3px 2px rgba(0, 0, 0, 0.3); }
+      @media only screen and (max-width: 1060px) {
+        .about-container .info-container img.profile {
+          height: 320px;
+          align-self: flex-start;
+          margin-top: 20px; } }
+      @media only screen and (max-width: 770px) {
+        .about-container .info-container img.profile {
+          align-self: center;
+          margin-bottom: 20px;
+          margin-top: 0; } }
+      @media only screen and (max-width: 605px) {
+        .about-container .info-container img.profile {
+          height: 280px;
+          margin-bottom: 10px; } }
 
 .contact-container .header-container {
   width: 90%; }
@@ -175,6 +227,19 @@ header {
     justify-content: center;
     transition: all 0.75s ease;
     position: relative; }
+    @media only screen and (max-width: 630px) {
+      .contact-container .contact .icon-container {
+        height: 120px;
+        margin: 0 25px;
+        width: 120px; } }
+    @media only screen and (max-width: 460px) {
+      .contact-container .contact .icon-container {
+        height: 100px;
+        width: 100px; } }
+    @media only screen and (max-width: 400px) {
+      .contact-container .contact .icon-container {
+        margin: 0 15px;
+        height: 80px; } }
     .contact-container .contact .icon-container:hover {
       border: 3px solid #823352;
       cursor: pointer;
@@ -185,12 +250,21 @@ header {
     .contact-container .contact .icon-container img {
       height: 60px;
       align-self: center; }
+      @media only screen and (max-width: 630px) {
+        .contact-container .contact .icon-container img {
+          height: 50px; } }
+      @media only screen and (max-width: 400px) {
+        .contact-container .contact .icon-container img {
+          height: 40px; } }
   .contact-container .contact form {
     display: flex;
     flex-direction: column;
     width: 60%;
     font-family: "Montserrat", sans-serif;
     margin: 40px 0; }
+    @media only screen and (max-width: 770px) {
+      .contact-container .contact form {
+        width: 75%; } }
     .contact-container .contact form label {
       margin-top: 20px; }
     .contact-container .contact form input {
@@ -210,6 +284,9 @@ header {
       margin: 40px 0;
       opacity: 0.8;
       width: 130px; }
+      @media only screen and (max-width: 605px) {
+        .contact-container .contact form .submit {
+          align-self: center; } }
       .contact-container .contact form .submit:hover {
         background: rgba(130, 51, 82, 0.9);
         border: 2px solid white;
