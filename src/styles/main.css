@@ -171,7 +171,6 @@ header {
         align-self: center;
         background: rgba(255, 255, 255, 0.9);
         border: 2px solid #333;
-        color: #823352;
         font-family: "Montserrat", sans-serif;
         font-size: 18px;
         height: 40px;
@@ -183,8 +182,12 @@ header {
           background: rgba(130, 51, 82, 0.9);
           border: 2px solid white;
           border-radius: 10px;
-          color: white;
           cursor: pointer; }
+          .about-container .info-container .about-description .resume:hover a {
+            color: white; }
+        .about-container .info-container .about-description .resume a {
+          text-decoration: none;
+          color: #823352; }
     .about-container .info-container img.profile {
       align-self: center;
       border-radius: 50%;
