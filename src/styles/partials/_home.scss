@@ -1,78 +1,203 @@
 .home-container {
-  width: 100vw;
-  height: 100vh;
-  background: $plum;
-  display: flex;
-
-  .nav {
-    height: 100vh;
-    width: 15%;
-    background: $sail;
-    position: relative;
-
-    .nav-list {
-      display: flex;
-      flex-direction: column;
-      height: 100%;
-      justify-content: center;
-
-      li {
-        align-self: center;
-        font-family: $mont;
-        font-size: 35px;
-        font-weight: bold;
-        letter-spacing: 0.1em;
-
-        &:hover a {
-          color: $plum;
-        }
-
-        &:nth-of-type(2) {
-          margin: 35px 0;
-        }
-
-        a {
-          text-decoration: none;
-          color: white;
-
-          &:hover {
-            cursor: pointer;
-          }
-        }
-      }
+    width: 100vw;
+    min-height: 100vh;
+    background: $plum;
+    display: flex;
+    @include media(mobileLarge) {
+        flex-direction: column;
     }
 
-    .home-triangle {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      left: 100%;
-      width: 0;
-      height: 0;
-      border-style: solid;
-      border-width: 25px 0 25px 20px;
-      border-color: transparent transparent transparent $sail;
+    .nav {
+        height: 100vh;
+        width: 18%;
+        background: $sail;
+        position: relative;
+        @include media(tabletLarge) {
+            width: 22%;
+        }
+        @include media(tablet) {
+            width: 25%;
+        }
+        @include media(mobileLarge) {
+            height: 80px;
+            width: 100%;
+        }
+
+        .mobile-menu {
+            color: white;
+            font-family: $mont;
+            font-weight: bold;
+            display: none;
+            font-size: 30px;
+            letter-spacing: 0.1em;
+            line-height: 80px;
+            text-align: right;
+            width: 100%;
+
+            a {
+                padding-right: 20px;
+
+                &:hover {
+                    cursor: pointer;
+                    color: $plum;
+                }
+
+                &.close {
+                    color: $plum;
+                }
+            }
+            @include media(mobileSmall) {
+                display: block;
+            }
+        }
+
+        .nav-list {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            justify-content: center;
+            @include media(mobileLarge) {
+                flex-direction: row;
+            }
+            @include media(mobile) {
+                margin: 0 10px;
+                justify-content: space-between;
+            }
+            @include media(mobileSmall) {
+                display: none;
+
+                &.active {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    background: $sail;
+                    min-height: 100vh;
+                    padding: 40px 0 0;
+                    margin: 0;
+                    text-align: center;
+
+                    li {
+                        margin: 20px 0;
+                    }
+                }
+            }
+
+            li {
+                align-self: center;
+                display: flex;
+                justify-content: center;
+                font-family: $mont;
+                font-size: 35px;
+                font-weight: bold;
+                letter-spacing: 0.1em;
+                transition: all 0.5s ease;
+                @include media(desktopLarge) {
+                    font-size: 30px;
+                }
+                @include media(tabletSmall) {
+                    font-size: 25px;
+                }
+                @include media(mobileLarge) {
+                    font-size: 30px;
+                    width: 33.33%;
+                }
+                @include media(mobile) {
+                    font-size: 25px;
+                }
+
+                &:hover a {
+                    color: $plum;
+                }
+
+                &:nth-of-type(2) {
+                    margin: 35px 0;
+                    @include media(mobileLarge) {
+                        margin: 0;
+                    }
+                }
+
+                a {
+                    text-decoration: none;
+                    color: white;
+                    width: 100%;
+                    text-align: center;
+
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+
+        .home-triangle {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 100%;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 25px 0 25px 20px;
+            border-color: transparent transparent transparent $sail;
+            @include media(mobileLarge) {
+                border-width: 20px 25px 0 25px;
+                border-color: $sail transparent transparent transparent;
+                width: 0;
+                height: 0;
+                border-style: solid;
+                left: 50%;
+                transform: translateX(-50%);
+                top: 100%;
+            }
+        }
     }
-  }
+
     .home-main {
-      align-self: center;
-      width: 85%;
+        align-self: center;
+        width: 82%;
+        @include media(tablet) {
+            width: 75%;
+        }
+        @include media(mobileLarge) {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 90%;
+        }
 
-      h1 {
-        color: white;
-        font-family: $pacifico;
-        font-size: 85px;
-        line-height: 100px;
-        text-align: center;
-      }
+        h1 {
+            color: white;
+            font-family: $pacifico;
+            font-size: 85px;
+            line-height: 100px;
+            text-align: center;
+            @include media(tablet) {
+                font-size: 65px;
+            }
+            @include media(mobile) {
+                font-size: 55px;
+            }
+            @include media(mobileSmall) {
+                font-size: 45px;
+            }
+        }
 
-      p {
-        color: white;
-        font-family: $mont;
-        font-size: 30px;
-        letter-spacing: 0.05em;
-        margin-top: 40px;
-        text-align: center;
-      }
+        p {
+            color: white;
+            font-family: $mont;
+            font-size: 30px;
+            letter-spacing: 0.05em;
+            margin-top: 40px;
+            text-align: center;
+            @include media(tablet) {
+                font-size: 25px;
+                margin-top: 20px;
+            }
+            @include media(mobile) {
+                font-size: 20px;
+                margin-top: 7px;
+            }
+        }
     }
 }

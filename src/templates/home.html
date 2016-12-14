@@ -1,9 +1,10 @@
 <div class='home-container'>
   <div class='nav'>
-    <ul class='nav-list'>
-      <li><a ui-sref='PortfolioParent.about' ng-model='about' ng-class="{'active': about}" ng-click="toggleActive('about')">about</a></li>
-      <li><a ui-sref='PortfolioParent.work' ng-model='work' ng-class="{'active': work}" ng-click="toggleActive('work')">work</a></li>
-      <li><a ui-sref='PortfolioParent.contact' ng-model='contact' ng-class="{'active': contact}" ng-click="toggleActive('contact')">contact</a></li>
+    <div class='mobile-menu'><a ng-click='toggleMenu()' ng-show='!showMenu'>menu</a><a class='close' ng-click='toggleMenu()' ng-show='showMenu'>close</a></div>
+    <ul class='nav-list' ng-class="{'active': showMenu}">
+      <li><a class='home-about' ui-sref='PortfolioParent.about' ng-model='about' ng-class="{'active': about}" ng-click="toggleMenu()">about</a></li>
+      <li><a class='home-work' ui-sref='PortfolioParent.work' ng-model='work' ng-class="{'active': work}" ng-click="toggleMenu()">work</a></li>
+      <li><a class='home-contact' ui-sref='PortfolioParent.contact' ng-model='contact' ng-class="{'active': contact}" ng-click="toggleMenu()">contact</a></li>
     </ul>
     <div class='home-triangle'>
     </div>

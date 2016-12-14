@@ -9,9 +9,11 @@
     flex-direction: column;
 
     .work {
+        align-self: center;
         position: relative;
         border: 6px solid $sail;
         border-radius: 3px;
+        height: 250px;
         width: 500px;
         -webkit-box-shadow: 0 8px 6px -6px black;
         -moz-box-shadow: 0 8px 6px -6px black;
@@ -22,10 +24,9 @@
         }
         @include media(tabletLarge) {
             width: 380px;
+            height: 200px;
         }
         @include media(tablet) {
-            height: 230px;
-            align-self: center;
             margin-bottom: 30px;
         }
         @include media(mobile) {

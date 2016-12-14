@@ -299,32 +299,107 @@ header {
 
 .home-container {
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   background: #823352;
   display: flex; }
+  @media only screen and (max-width: 605px) {
+    .home-container {
+      flex-direction: column; } }
   .home-container .nav {
     height: 100vh;
-    width: 15%;
+    width: 18%;
     background: #9FCFD5;
     position: relative; }
+    @media only screen and (max-width: 970px) {
+      .home-container .nav {
+        width: 22%; } }
+    @media only screen and (max-width: 770px) {
+      .home-container .nav {
+        width: 25%; } }
+    @media only screen and (max-width: 605px) {
+      .home-container .nav {
+        height: 80px;
+        width: 100%; } }
+    .home-container .nav .mobile-menu {
+      color: white;
+      font-family: "Montserrat", sans-serif;
+      font-weight: bold;
+      display: none;
+      font-size: 30px;
+      letter-spacing: 0.1em;
+      line-height: 80px;
+      text-align: right;
+      width: 100%; }
+      .home-container .nav .mobile-menu a {
+        padding-right: 20px; }
+        .home-container .nav .mobile-menu a:hover {
+          cursor: pointer;
+          color: #823352; }
+        .home-container .nav .mobile-menu a.close {
+          color: #823352; }
+      @media only screen and (max-width: 400px) {
+        .home-container .nav .mobile-menu {
+          display: block; } }
     .home-container .nav .nav-list {
       display: flex;
       flex-direction: column;
       height: 100%;
       justify-content: center; }
+      @media only screen and (max-width: 605px) {
+        .home-container .nav .nav-list {
+          flex-direction: row; } }
+      @media only screen and (max-width: 460px) {
+        .home-container .nav .nav-list {
+          margin: 0 10px;
+          justify-content: space-between; } }
+      @media only screen and (max-width: 400px) {
+        .home-container .nav .nav-list {
+          display: none; }
+          .home-container .nav .nav-list.active {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            background: #9FCFD5;
+            min-height: 100vh;
+            padding: 40px 0 0;
+            margin: 0;
+            text-align: center; }
+            .home-container .nav .nav-list.active li {
+              margin: 20px 0; } }
       .home-container .nav .nav-list li {
         align-self: center;
+        display: flex;
+        justify-content: center;
         font-family: "Montserrat", sans-serif;
         font-size: 35px;
         font-weight: bold;
-        letter-spacing: 0.1em; }
+        letter-spacing: 0.1em;
+        transition: all 0.5s ease; }
+        @media only screen and (max-width: 1130px) {
+          .home-container .nav .nav-list li {
+            font-size: 30px; } }
+        @media only screen and (max-width: 630px) {
+          .home-container .nav .nav-list li {
+            font-size: 25px; } }
+        @media only screen and (max-width: 605px) {
+          .home-container .nav .nav-list li {
+            font-size: 30px;
+            width: 33.33%; } }
+        @media only screen and (max-width: 460px) {
+          .home-container .nav .nav-list li {
+            font-size: 25px; } }
         .home-container .nav .nav-list li:hover a {
           color: #823352; }
         .home-container .nav .nav-list li:nth-of-type(2) {
           margin: 35px 0; }
+          @media only screen and (max-width: 605px) {
+            .home-container .nav .nav-list li:nth-of-type(2) {
+              margin: 0; } }
         .home-container .nav .nav-list li a {
           text-decoration: none;
-          color: white; }
+          color: white;
+          width: 100%;
+          text-align: center; }
           .home-container .nav .nav-list li a:hover {
             cursor: pointer; }
     .home-container .nav .home-triangle {
@@ -337,15 +412,44 @@ header {
       border-style: solid;
       border-width: 25px 0 25px 20px;
       border-color: transparent transparent transparent #9FCFD5; }
+      @media only screen and (max-width: 605px) {
+        .home-container .nav .home-triangle {
+          border-width: 20px 25px 0 25px;
+          border-color: #9FCFD5 transparent transparent transparent;
+          width: 0;
+          height: 0;
+          border-style: solid;
+          left: 50%;
+          transform: translateX(-50%);
+          top: 100%; } }
   .home-container .home-main {
     align-self: center;
-    width: 85%; }
+    width: 82%; }
+    @media only screen and (max-width: 770px) {
+      .home-container .home-main {
+        width: 75%; } }
+    @media only screen and (max-width: 605px) {
+      .home-container .home-main {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 90%; } }
     .home-container .home-main h1 {
       color: white;
       font-family: "Pacifico", cursive;
       font-size: 85px;
       line-height: 100px;
       text-align: center; }
+      @media only screen and (max-width: 770px) {
+        .home-container .home-main h1 {
+          font-size: 65px; } }
+      @media only screen and (max-width: 460px) {
+        .home-container .home-main h1 {
+          font-size: 55px; } }
+      @media only screen and (max-width: 400px) {
+        .home-container .home-main h1 {
+          font-size: 45px; } }
     .home-container .home-main p {
       color: white;
       font-family: "Montserrat", sans-serif;
@@ -353,6 +457,14 @@ header {
       letter-spacing: 0.05em;
       margin-top: 40px;
       text-align: center; }
+      @media only screen and (max-width: 770px) {
+        .home-container .home-main p {
+          font-size: 25px;
+          margin-top: 20px; } }
+      @media only screen and (max-width: 460px) {
+        .home-container .home-main p {
+          font-size: 20px;
+          margin-top: 7px; } }
 
 .work-main-container .header-container {
   width: 90%; }
@@ -363,9 +475,11 @@ header {
   display: flex;
   flex-direction: column; }
   .work-container .work {
+    align-self: center;
     position: relative;
     border: 6px solid #9FCFD5;
     border-radius: 3px;
+    height: 250px;
     width: 500px;
     -webkit-box-shadow: 0 8px 6px -6px black;
     -moz-box-shadow: 0 8px 6px -6px black;
@@ -376,11 +490,10 @@ header {
         width: 420px; } }
     @media only screen and (max-width: 970px) {
       .work-container .work {
-        width: 380px; } }
+        width: 380px;
+        height: 200px; } }
     @media only screen and (max-width: 770px) {
       .work-container .work {
-        height: 230px;
-        align-self: center;
         margin-bottom: 30px; } }
     @media only screen and (max-width: 460px) {
       .work-container .work {
