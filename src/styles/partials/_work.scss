@@ -1,5 +1,5 @@
-.work-main-container .header-container{
-  width: 90%;
+.work-main-container .header-container {
+    width: 90%;
 }
 
 .work-container {
@@ -16,25 +16,21 @@
         -webkit-box-shadow: 0 8px 6px -6px black;
         -moz-box-shadow: 0 8px 6px -6px black;
         box-shadow: 0 8px 6px -6px black;
-        transition: all .5s ease;
-
+        transition: all 0.5s ease;
         @include media(desktop) {
-          width: 420px;
+            width: 420px;
         }
-
         @include media(tabletLarge) {
-          width: 380px;
+            width: 380px;
         }
-
         @include media(tablet) {
-          height: 230px;
-          align-self: center;
-          margin-bottom: 30px;
+            height: 230px;
+            align-self: center;
+            margin-bottom: 30px;
         }
-
         @include media(mobile) {
-          width: 300px;
-          height: 170px;
+            width: 300px;
+            height: 170px;
         }
 
         .triangle {
@@ -48,13 +44,12 @@
                 border-color: transparent transparent transparent $sail;
                 top: 30px;
                 right: -21px;
-
                 @include media(tablet) {
-                  border-width: 20px 25px 0 25px;
-                  border-color: $sail transparent transparent transparent;
-                  right: 50%;
-                  transform: translateX(50%);
-                  top: 100%;
+                    border-width: 20px 25px 0 25px;
+                    border-color: $sail transparent transparent transparent;
+                    right: 50%;
+                    transform: translateX(50%);
+                    top: 100%;
                 }
             }
 
@@ -63,13 +58,12 @@
                 border-color: transparent $sail transparent transparent;
                 top: 30px;
                 left: -21px;
-
                 @include media(tablet) {
-                  border-width: 20px 25px 0 25px;
-                  border-color: $sail transparent transparent transparent;
-                  left: 50%;
-                  transform: translateX(-50%);
-                  top: 100%;
+                    border-width: 20px 25px 0 25px;
+                    border-color: $sail transparent transparent transparent;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    top: 100%;
                 }
             }
         }
@@ -79,9 +73,8 @@
         background: url('../../images/codekarma.png') no-repeat $sail;
         background-size: cover;
         background-position: center;
-
         @include media(desktop) {
-          background-size: contain;
+            background-size: contain;
         }
     }
 
@@ -89,9 +82,8 @@
         background: url('../../images/hatchery.png') no-repeat $sail;
         background-size: cover;
         background-position: center;
-
         @include media(desktop) {
-          background-size: contain;
+            background-size: contain;
         }
     }
 
@@ -99,9 +91,8 @@
         background: url('../../images/petsy.png') no-repeat $sail;
         background-size: cover;
         background-position: center;
-
         @include media(desktop) {
-          background-size: contain;
+            background-size: contain;
         }
     }
 
@@ -109,9 +100,8 @@
         background: url('../../images/brainstorm.png') no-repeat $sail;
         background-size: cover;
         background-position: center;
-
         @include media(desktop) {
-          background-size: contain;
+            background-size: contain;
         }
     }
 
@@ -121,19 +111,17 @@
         margin: 40px 0;
 
         &:nth-of-type(even) {
-          @include media(tablet) {
-              flex-direction: column-reverse;
+            @include media(tablet) {
+                flex-direction: column-reverse;
             }
         }
-
         @include media(tablet) {
-          flex-direction: column;
-          justify-content: center;
-          margin: 40px 0 20px 0;
+            flex-direction: column;
+            justify-content: center;
+            margin: 40px 0 20px;
         }
-
         @include media(mobileLarge) {
-          margin-bottom: 10px;
+            margin-bottom: 10px;
         }
 
         .project-details {
@@ -142,27 +130,22 @@
             height: 250px;
             width: 45%;
             position: relative;
-
             @include media(desktopLarge) {
-              width: 40%;
+                width: 40%;
             }
-
             @include media(tabletLarge) {
-              font-size: 15px;
+                font-size: 15px;
             }
-
             @include media(tablet) {
-              width: 80%;
-              align-self: center;
-              height: 200px;
+                width: 80%;
+                align-self: center;
+                height: 200px;
             }
-
             @include media(mobileLarge) {
-              height: 220px;
+                height: 220px;
             }
-
             @include media(mobile) {
-              height: 240px;
+                height: 240px;
             }
 
             .title {
@@ -170,9 +153,8 @@
                 font-size: 30px;
                 font-weight: bold;
                 margin: 10px 0 20px;
-
                 @include media(tablet) {
-                  text-align: center;
+                    text-align: center;
                 }
             }
 
@@ -180,13 +162,11 @@
                 color: #333;
                 line-height: 20px;
                 margin-top: 30px;
-
                 @include media(tabletLarge) {
-                  margin-top: 20px;
+                    margin-top: 20px;
                 }
-
                 @include media(tablet) {
-                  text-align: justify;
+                    text-align: justify;
                 }
             }
 
@@ -195,14 +175,12 @@
                 line-height: 30px;
                 color: $plum;
                 bottom: 15px;
-
                 @include media(tabletLarge) {
-                  line-height: 24px;
+                    line-height: 24px;
                 }
-
                 @include media(tablet) {
-                  text-align: center;
-                  width: 100%;
+                    text-align: center;
+                    width: 100%;
                 }
             }
         }

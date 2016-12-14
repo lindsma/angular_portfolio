@@ -25,21 +25,18 @@
             justify-content: center;
             transition: all 0.75s ease;
             position: relative;
-
             @include media(tabletSmall) {
-              height: 120px;
-              margin: 0 25px;
-              width: 120px;
+                height: 120px;
+                margin: 0 25px;
+                width: 120px;
             }
-
             @include media(mobile) {
-              height: 100px;
-              width: 100px;
+                height: 100px;
+                width: 100px;
             }
-
             @include media(mobileSmall) {
-              margin: 0 15px;
-              height: 80px;
+                margin: 0 15px;
+                height: 80px;
             }
 
             &:hover {
@@ -56,12 +53,11 @@
             img {
                 height: 60px;
                 align-self: center;
-
                 @include media(tabletSmall) {
-                  height: 50px;
+                    height: 50px;
                 }
                 @include media(mobileSmall) {
-                  height: 40px;
+                    height: 40px;
                 }
             }
         }
@@ -72,9 +68,8 @@
             width: 60%;
             font-family: $mont;
             margin: 40px 0;
-
             @include media(tablet) {
-              width: 75%;
+                width: 75%;
             }
 
             label {
@@ -100,9 +95,8 @@
                 margin: 40px 0;
                 opacity: 0.8;
                 width: 130px;
-
                 @include media(mobileLarge) {
-                  align-self: center;
+                    align-self: center;
                 }
 
                 &:hover {

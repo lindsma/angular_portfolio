@@ -24,10 +24,10 @@
             justify-content: space-between;
             margin: 0 0 40px 65px;
             @include media(desktop) {
-              margin-top: 20px;
+                margin-top: 20px;
             }
             @include media(tablet) {
-              margin: 20px 20px 40px 20px;
+                margin: 20px 20px 40px;
             }
 
             p {
@@ -39,13 +39,11 @@
                 &.personal {
                     margin-top: 20px;
                 }
-
                 @include media(tablet) {
-                  text-align: justify;
+                    text-align: justify;
                 }
-
                 @include media(mobileSmall) {
-                  line-height: 25px;
+                    line-height: 25px;
                 }
             }
 
@@ -68,13 +66,13 @@
                     cursor: pointer;
 
                     a {
-                      color: white;
+                        color: white;
                     }
                 }
 
                 a {
-                  text-decoration: none;
-                  color: $plum;
+                    text-decoration: none;
+                    color: $plum;
                 }
             }
         }
@@ -96,8 +94,8 @@
                 margin-top: 0;
             }
             @include media(mobileLarge) {
-              height: 280px;
-              margin-bottom: 10px;
+                height: 280px;
+                margin-bottom: 10px;
             }
         }
     }

@@ -5,14 +5,14 @@
     <meta charset='UTF-8'>
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <title>lindsey adams</title>
-    <!-- <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon"> -->
-    <!-- <link rel="icon" href="images/favicon.ico" type="image/x-icon"> -->
+    <link rel="shortcut icon" href="images/la_logo.png" type="image/x-icon">
+    <link rel="icon" href="images/la_logo.png" type="image/x-icon">
     <link rel="stylesheet" href="src/styles/main.css">
     <link href="https://fonts.googleapis.com/css?family=Cabin|Lobster|Montserrat:400,700|Pacifico" rel="stylesheet">
 </head>
 
 <body ng-controller='PortfolioController as portfolio'>
-    <header ng-hide='portfolio.home'>
+    <!-- <header ng-hide='portfolio.home'>
       <h1 ui-sref='PortfolioParent.home' ng-click="toggleActive('home')">lindsey adams</h1>
       <nav>
         <ul class='nav-bar'>
@@ -21,7 +21,7 @@
           <li><a ui-sref='PortfolioParent.contact' ng-model='contact' ng-class="{'active': contact}" ng-click="toggleActive('contact')">contact</a></li>
         </ul>
       </nav>
-    </header>
+    </header> -->
     <main>
         <ui-view></ui-view>
     </main>

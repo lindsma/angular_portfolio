@@ -1,3 +1,13 @@
+<header ng-hide='portfolio.home'>
+  <h1 ui-sref='PortfolioParent.home' ng-click="toggleActive('home')">lindsey adams</h1>
+  <nav>
+    <ul class='nav-bar'>
+      <li><a ui-sref='PortfolioParent.about' ng-model='about' ng-class="{'active': about}" ng-click="toggleActive('about')">about</a></li>
+      <li><a ui-sref='PortfolioParent.work' ng-model='work' ng-class="{'active': work}" ng-click="toggleActive('work')">work</a></li>
+      <li><a ui-sref='PortfolioParent.contact' ng-model='contact' ng-class="{'active': contact}" ng-click="toggleActive('contact')">contact</a></li>
+    </ul>
+  </nav>
+</header>
 <div class='contact-container'>
   <div class='header-container'>
   <hr class='header one'>
