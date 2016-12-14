@@ -47,6 +47,44 @@ body {
   background: url("../../images/brickwall.png"); }
 
 /***** Site Components ******/
+.mobile-menu {
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  display: none;
+  font-size: 30px;
+  letter-spacing: 0.1em;
+  line-height: 80px;
+  text-align: right;
+  width: 100%; }
+  .mobile-menu a {
+    padding-right: 20px; }
+    .mobile-menu a:hover {
+      cursor: pointer;
+      color: #823352; }
+    .mobile-menu a.close {
+      color: #823352; }
+  .mobile-menu.main {
+    line-height: 90px;
+    height: 90px; }
+    .mobile-menu.main a:hover {
+      color: #9FCFD5; }
+    .mobile-menu.main a.close {
+      color: #9FCFD5; }
+    @media only screen and (max-width: 460px) {
+      .mobile-menu.main a {
+        font-size: 25px; } }
+    @media only screen and (max-width: 400px) {
+      .mobile-menu.main a {
+        font-size: 20px;
+        padding-right: 10px; } }
+    @media only screen and (max-width: 630px) {
+      .mobile-menu.main {
+        display: block; } }
+  @media only screen and (max-width: 400px) {
+    .mobile-menu {
+      display: block; } }
+
 header {
   background: #823352;
   display: flex;
@@ -60,6 +98,16 @@ header {
     margin-left: 40px; }
     header h1:hover {
       cursor: pointer; }
+    @media only screen and (max-width: 770px) {
+      header h1 {
+        margin-left: 20px; } }
+    @media only screen and (max-width: 460px) {
+      header h1 {
+        font-size: 35px; } }
+    @media only screen and (max-width: 400px) {
+      header h1 {
+        font-size: 30px;
+        margin-left: 10px; } }
   header .nav-bar {
     display: flex;
     font-family: "Montserrat", sans-serif;
@@ -67,8 +115,37 @@ header {
     justify-content: space-between;
     line-height: 90px;
     margin-right: 40px; }
+    @media only screen and (max-width: 770px) {
+      header .nav-bar {
+        margin-right: 20px; } }
+    @media only screen and (max-width: 630px) {
+      header .nav-bar {
+        display: none; }
+        header .nav-bar.active {
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          background: #9FCFD5;
+          margin: 0;
+          min-height: 100vh;
+          width: 100vw;
+          text-align: center;
+          z-index: 50; }
+          header .nav-bar.active li {
+            margin: 20px 0;
+            height: 40px; }
+          header .nav-bar.active a {
+            color: white;
+            font-size: 35px;
+            font-weight: bold;
+            letter-spacing: 0.1em; }
+            header .nav-bar.active a:hover {
+              color: #823352; } }
     header .nav-bar li {
       margin-left: 50px; }
+      @media only screen and (max-width: 770px) {
+        header .nav-bar li {
+          margin-left: 30px; } }
       header .nav-bar li a {
         text-decoration: none;
         color: #9FCFD5;
@@ -132,7 +209,8 @@ header {
   flex-direction: column;
   justify-content: center;
   margin: 0 auto;
-  width: 90%; }
+  width: 90%;
+  z-index: 5; }
   .about-container .header-container {
     width: 100%;
     margin-bottom: 20px; }
@@ -320,26 +398,6 @@ header {
       .home-container .nav {
         height: 80px;
         width: 100%; } }
-    .home-container .nav .mobile-menu {
-      color: white;
-      font-family: "Montserrat", sans-serif;
-      font-weight: bold;
-      display: none;
-      font-size: 30px;
-      letter-spacing: 0.1em;
-      line-height: 80px;
-      text-align: right;
-      width: 100%; }
-      .home-container .nav .mobile-menu a {
-        padding-right: 20px; }
-        .home-container .nav .mobile-menu a:hover {
-          cursor: pointer;
-          color: #823352; }
-        .home-container .nav .mobile-menu a.close {
-          color: #823352; }
-      @media only screen and (max-width: 400px) {
-        .home-container .nav .mobile-menu {
-          display: block; } }
     .home-container .nav .nav-list {
       display: flex;
       flex-direction: column;

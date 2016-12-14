@@ -1,14 +1,15 @@
 <header ng-hide='portfolio.home'>
-  <h1 ui-sref='PortfolioParent.home' ng-click="toggleActive('home')">lindsey adams</h1>
+  <h1 ui-sref='PortfolioParent.home' ng-click="toggleActive('home')" ng-show='!showMenu'>lindsey adams</h1>
   <nav>
-    <ul class='nav-bar'>
+    <div class='mobile-menu main'><a ng-click='toggleMenu()' ng-show='!showMenu'>menu</a><a class='close' ng-click='toggleMenu()' ng-show='showMenu'>close</a></div>
+    <ul class='nav-bar' ng-class="{'active': showMenu}">
       <li><a ui-sref='PortfolioParent.about' class='active'>about</a></li>
       <li><a ui-sref='PortfolioParent.work'>work</a></li>
       <li><a ui-sref='PortfolioParent.contact'>contact</a></li>
     </ul>
   </nav>
 </header>
-<div class='about-container'>
+<div class='about-container' ng-show='!showMenu'>
   <div class='header-container'>
   <hr class='header one'>
   <h3>about me</h3>
