@@ -531,8 +531,12 @@ header {
   margin: 0 auto;
   display: flex;
   flex-direction: column; }
+  .work-container a {
+    align-self: center; }
   .work-container .work {
     align-self: center;
+    background: #9FCFD5;
+    background-repeat: no-repeat;
     position: relative;
     border: 6px solid #9FCFD5;
     border-radius: 3px;
@@ -544,7 +548,8 @@ header {
     transition: all 0.5s ease; }
     @media only screen and (max-width: 1060px) {
       .work-container .work {
-        width: 420px; } }
+        width: 420px;
+        height: 210px; } }
     @media only screen and (max-width: 970px) {
       .work-container .work {
         width: 380px;
@@ -563,62 +568,36 @@ header {
       height: 0;
       position: absolute;
       border-style: solid; }
-      .work-container .work .triangle.right {
+      .work-container .work .triangle.odd {
         border-width: 25px 0 25px 20px;
         border-color: transparent transparent transparent #9FCFD5;
         top: 30px;
         right: -21px; }
         @media only screen and (max-width: 770px) {
-          .work-container .work .triangle.right {
+          .work-container .work .triangle.odd {
             border-width: 20px 25px 0 25px;
             border-color: #9FCFD5 transparent transparent transparent;
             right: 50%;
             transform: translateX(50%);
             top: 100%; } }
-      .work-container .work .triangle.left {
+      .work-container .work .triangle.even {
         border-width: 25px 20px 25px 0;
         border-color: transparent #9FCFD5 transparent transparent;
         top: 30px;
         left: -21px; }
         @media only screen and (max-width: 770px) {
-          .work-container .work .triangle.left {
+          .work-container .work .triangle.even {
             border-width: 20px 25px 0 25px;
             border-color: #9FCFD5 transparent transparent transparent;
             left: 50%;
             transform: translateX(-50%);
             top: 100%; } }
-  .work-container .work.codekarma {
-    background: url("../../images/codekarma.png") no-repeat #9FCFD5;
-    background-size: cover;
-    background-position: center; }
-    @media only screen and (max-width: 1060px) {
-      .work-container .work.codekarma {
-        background-size: contain; } }
-  .work-container .work.hatchery {
-    background: url("../../images/hatchery.png") no-repeat #9FCFD5;
-    background-size: cover;
-    background-position: center; }
-    @media only screen and (max-width: 1060px) {
-      .work-container .work.hatchery {
-        background-size: contain; } }
-  .work-container .work.petsy {
-    background: url("../../images/petsy.png") no-repeat #9FCFD5;
-    background-size: cover;
-    background-position: center; }
-    @media only screen and (max-width: 1060px) {
-      .work-container .work.petsy {
-        background-size: contain; } }
-  .work-container .work.brainstorm {
-    background: url("../../images/brainstorm.png") no-repeat #9FCFD5;
-    background-size: cover;
-    background-position: center; }
-    @media only screen and (max-width: 1060px) {
-      .work-container .work.brainstorm {
-        background-size: contain; } }
   .work-container .project-container {
     display: flex;
     justify-content: space-between;
     margin: 40px 0; }
+    .work-container .project-container.even {
+      flex-direction: row-reverse; }
     @media only screen and (max-width: 770px) {
       .work-container .project-container:nth-of-type(even) {
         flex-direction: column-reverse; } }
@@ -690,5 +669,8 @@ hr.divider {
   width: 100%;
   border-top: 1px solid rgba(0, 0, 0, 0.2);
   border-bottom: 1px solid rgba(255, 255, 255, 0.3); }
+
+.repeat-container:last-child hr {
+  display: none; }
 
 /*# sourceMappingURL=main.css.map */

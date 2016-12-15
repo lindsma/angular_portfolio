@@ -8,8 +8,14 @@
     display: flex;
     flex-direction: column;
 
+    a {
+      align-self: center;
+    }
+
     .work {
         align-self: center;
+        background: $sail;
+        background-repeat: no-repeat;
         position: relative;
         border: 6px solid $sail;
         border-radius: 3px;
@@ -21,6 +27,7 @@
         transition: all 0.5s ease;
         @include media(desktop) {
             width: 420px;
+            height: 210px;
         }
         @include media(tabletLarge) {
             width: 380px;
@@ -44,7 +51,7 @@
             position: absolute;
             border-style: solid;
 
-            &.right {
+            &.odd {
                 border-width: 25px 0 25px 20px;
                 border-color: transparent transparent transparent $sail;
                 top: 30px;
@@ -58,7 +65,7 @@
                 }
             }
 
-            &.left {
+            &.even {
                 border-width: 25px 20px 25px 0;
                 border-color: transparent $sail transparent transparent;
                 top: 30px;
@@ -74,48 +81,17 @@
         }
     }
 
-    .work.codekarma {
-        background: url('../../images/codekarma.png') no-repeat $sail;
-        background-size: cover;
-        background-position: center;
-        @include media(desktop) {
-            background-size: contain;
-        }
-    }
-
-    .work.hatchery {
-        background: url('../../images/hatchery.png') no-repeat $sail;
-        background-size: cover;
-        background-position: center;
-        @include media(desktop) {
-            background-size: contain;
-        }
-    }
-
-    .work.petsy {
-        background: url('../../images/petsy.png') no-repeat $sail;
-        background-size: cover;
-        background-position: center;
-        @include media(desktop) {
-            background-size: contain;
-        }
-    }
-
-    .work.brainstorm {
-        background: url('../../images/brainstorm.png') no-repeat $sail;
-        background-size: cover;
-        background-position: center;
-        @include media(desktop) {
-            background-size: contain;
-        }
-    }
-
     .project-container {
         display: flex;
         justify-content: space-between;
         margin: 40px 0;
 
+        &.even {
+          flex-direction: row-reverse;
+        }
+
         &:nth-of-type(even) {
+
             @include media(tablet) {
                 flex-direction: column-reverse;
             }
@@ -198,4 +174,10 @@ hr.divider {
     width: 100%;
     border-top: 1px solid rgba(0, 0, 0, 0.2);
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.repeat-container {
+  &:last-child hr{
+    display: none;
+  }
 }

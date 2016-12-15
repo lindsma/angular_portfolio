@@ -16,56 +16,21 @@
     <hr class='header two'>
   </div>
 <section class='work-container'>
-    <div class='project-container'>
-        <a href='https://github.com/lindsma/codeKarma'>
-        <div class='work codekarma'>
-            <div class='triangle right'></div>
-        </div>
-        </a>
-        <ul class='project-details'>
-            <li class='title'>Code Karma</li>
-            <li class='description'>Utilized GitHub API to create a platform for nonprofits to connect with highly qualified developers.</li>
-            <li class='skills'>AngularJS - JavaScript - AJAX - JQuery - JQuery UI - HTML5 - Sass</li>
-        </ul>
-    </div>
-    <hr class='divider'>
-    <div class='project-container'>
-        <ul class='project-details'>
-            <li class='title'>Hatchery</li>
-            <li class='description'>Online inventory and ordering system for buying and selling farm-fresh eggs. Utilized Weather Underground API for a fun "check on the chickens" feature.</li>
-            <li class='skills'>AngularJS - JavaScript - JQuery - AJAX - HTML5 - Sass</li>
-        </ul>
-        <a href='https://github.com/lindsma/Hatchery-App'>
-        <div class='work hatchery'>
-            <div class='triangle left'></div>
-        </div>
-        </a>
-    </div>
-    <hr class='divider'>
-    <div class='project-container'>
-        <a href='https://github.com/lindsma/week-long-website'>
-        <div class='work petsy'>
-            <div class='triangle right'></div>
-        </div>
-        </a>
-        <ul class='project-details right'>
-            <li class='title'>Petsy</li>
-            <li class='description'>Utilized PetFinder and Etsy APIs to create an online petshop.</li>
-            <li class='skills'>JavaScript - Handlebars - AJAX - JQuery - HTML5 - Sass</li>
-        </ul>
-    </div>
-    <hr class='divider'>
-    <div class='project-container'>
-        <ul class='project-details left'>
-            <li class='title'>brainsto.rm</li>
-            <li class='description'>Created a brain game where users are challenged to solve math problems falling from the sky before they hit the ground. Math problems increase in difficulty and velocity.</li>
-            <li class='skills'>JavaScript - AJAX - JQuery - Haml - Sass</li>
-        </ul>
-        <a href='https://github.com/lindsma/brainstorm-3.0'>
-        <div class='work brainstorm'>
-            <div class='triangle left'></div>
-        </div>
-        </a>
-    </div>
+
+<div class='repeat-container' ng-repeat='project in projects'>
+  <div class='project-container' ng-class-odd="'odd'" ng-class-even="'even'">
+      <a href='project.github'>
+      <div class='work' style="background-image: url({{project.background}}); background-size: contain; background-position: center;">
+          <div class='triangle' ng-class-odd="'odd'" ng-class-even="'even'"></div>
+      </div>
+      </a>
+      <ul class='project-details'>
+          <li class='title'>{{project.title}}</li>
+          <li class='description'>{{project.description}}</li>
+          <li class='skills'>{{project.skills}}</li>
+      </ul>
+  </div>
+  <hr class='divider'>
+</div>
 </section>
 </div>

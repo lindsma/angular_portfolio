@@ -22,6 +22,7 @@
           templateUrl: 'src/templates/contact.html'
       }).state('PortfolioParent.work', {
           url: 'work',
+          controller: 'WorkController as work',
           templateUrl: 'src/templates/work.html'
       });
 

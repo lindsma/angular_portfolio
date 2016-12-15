@@ -1,0 +1,27 @@
+{
+  "projects" : [{
+      "title": "Code Karma",
+      "description": "Utilized GitHub API to create a platform for nonprofits to connect with highly qualified developers.",
+      "skills": "AngularJS - JavaScript - AJAX - JQuery - JQuery UI - HTML5 - Sass",
+      "github": "https://github.com/lindsma/codeKarma",
+      "background": "images/codekarma.png"
+    }, {
+      "title": "Hatchery",
+      "description": "Online inventory and ordering system for buying and selling farm-fresh eggs. Utilized Weather Underground API for a fun 'check on the chickens' feature.",
+      "skills": "AngularJS - JavaScript - JQuery - AJAX - HTML5 - Sass",
+      "github": "https://github.com/lindsma/Hatchery-App",
+      "background": "images/hatchery.png"
+    }, {
+      "title": "Petsy",
+      "description": "Utilized PetFinder and Etsy APIs to create an online petshop where users can adopt a dog and shop for its accessories all at once.",
+      "skills": "JavaScript - Handlebars - AJAX - JQuery - HTML5 - Sass",
+      "github": "https://github.com/lindsma/week-long-website",
+      "background": "images/petsy.png"
+    }, {
+      "title": "brainsto.rm",
+      "description": "Created a brain game where users are challenged to solve math problems falling from the sky before they hit the ground. Math problems increase in difficulty and velocity.",
+      "skills": "JavaScript - AJAX - JQuery - Haml - Sass",
+      "github": "https://github.com/lindsma/brainstorm-3.0",
+      "background": "images/brainstorm.png"
+      }]
+}
