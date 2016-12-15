@@ -5,11 +5,11 @@ angular.module('portfolioApp').controller('PortfolioController', function($scope
     $scope.toggleMenu = function(page) {
       page = page || '';
         if ($(window).width() < 631 && page !== '') {
-            $scope.showMenu = !$scope.showMenu;
             $state.go(page);
+            $scope.showMenu = !$scope.showMenu;
         } else if ($(window).width() && page === '') {
           $scope.showMenu = !$scope.showMenu;
-        }      
+        }
     };
 
 });
