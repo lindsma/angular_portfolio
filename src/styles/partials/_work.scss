@@ -88,10 +88,14 @@
 
         &.even {
           flex-direction: row-reverse;
+          @include media(tablet) {
+              flex-direction: column;
+              justify-content: center;
+              margin: 40px 0 20px;
+          }
         }
 
         &:nth-of-type(even) {
-
             @include media(tablet) {
                 flex-direction: column-reverse;
             }

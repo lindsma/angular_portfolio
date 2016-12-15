@@ -598,6 +598,11 @@ header {
     margin: 40px 0; }
     .work-container .project-container.even {
       flex-direction: row-reverse; }
+      @media only screen and (max-width: 770px) {
+        .work-container .project-container.even {
+          flex-direction: column;
+          justify-content: center;
+          margin: 40px 0 20px; } }
     @media only screen and (max-width: 770px) {
       .work-container .project-container:nth-of-type(even) {
         flex-direction: column-reverse; } }
