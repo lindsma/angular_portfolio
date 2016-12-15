@@ -1,9 +1,15 @@
 angular.module('portfolioApp').controller('PortfolioController', function($scope, $state, $location) {
 
-$scope.showMenu = false;
+    $scope.showMenu = false;
 
-$scope.toggleMenu = function() {
-  $scope.showMenu = !$scope.showMenu;
-};
+    $scope.toggleMenu = function(page) {
+      page = page || '';
+        if ($(window).width() < 631 && page !== '') {
+            $scope.showMenu = !$scope.showMenu;
+            $state.go(page);
+        } else if ($(window).width() && page === '') {
+          $scope.showMenu = !$scope.showMenu;
+        }      
+    };
 
 });

@@ -324,8 +324,7 @@ header {
     .contact-container .contact .icon-container:hover {
       border: 3px solid #823352;
       cursor: pointer;
-      height: 175px;
-      width: 175px; }
+      transform: scale(1.2); }
     .contact-container .contact .icon-container a {
       align-self: center; }
     .contact-container .contact .icon-container img {

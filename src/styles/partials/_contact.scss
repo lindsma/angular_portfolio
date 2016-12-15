@@ -42,8 +42,7 @@
             &:hover {
                 border: 3px solid $plum;
                 cursor: pointer;
-                height: 175px;
-                width: 175px;
+                transform: scale(1.2);
             }
 
             a {
