@@ -556,6 +556,8 @@ header {
       .work-container .work {
         width: 300px;
         height: 170px; } }
+    .work-container .work:hover {
+      cursor: pointer; }
     .work-container .work .triangle {
       width: 0;
       height: 0;
