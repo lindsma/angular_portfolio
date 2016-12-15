@@ -7,7 +7,7 @@ angular.module('portfolioApp').controller('PortfolioController', function($scope
         if ($(window).width() < 631 && page !== '') {
             $state.go(page);
             $scope.showMenu = !$scope.showMenu;
-        } else if ($(window).width() && page === '') {
+        } else if ($(window).width() < 631 && page === '') {
           $scope.showMenu = !$scope.showMenu;
         }
     };
