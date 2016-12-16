@@ -19,7 +19,7 @@
 
 <div class='repeat-container' ng-repeat='project in projects'>
   <div class='project-container' ng-class-odd="'odd'" ng-class-even="'even'">
-      <a href='project.github'>
+      <a href='{{project.github}}'>
       <div class='work' style="background-image: url({{project.background}}); background-size: contain; background-position: center;">
           <div class='triangle' ng-class-odd="'odd'" ng-class-even="'even'"></div>
       </div>
