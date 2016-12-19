@@ -1,10 +1,10 @@
 <div class='home-container'>
   <div class='nav'>
-    <div class='mobile-menu'><a ng-click='toggleMenu()' ng-show='!showMenu'>menu</a><a class='close' ng-click='toggleMenu()' ng-show='showMenu'>close</a></div>
-    <ul class='nav-list' ng-class="{'active': showMenu}">
-      <li><a class='home-about' ui-sref='PortfolioParent.about' ng-click='toggleMenu()'>about</a></li>
-      <li><a class='home-work' ui-sref='PortfolioParent.work' ng-click='toggleMenu()'>work</a></li>
-      <li><a class='home-contact' ui-sref='PortfolioParent.contact' ng-click='toggleMenu()'>contact</a></li>
+    <div class='mobile-menu'><a ng-click='toggleHomeMenu()' ng-show='!showHomeMenu'>menu</a><a class='close' ng-click='toggleHomeMenu()' ng-show='showHomeMenu'>close</a></div>
+    <ul class='nav-list' ng-class="{'active': showHomeMenu}">
+      <li><a class='home-about' ui-sref='PortfolioParent.about' ng-click='toggleHomeMenu()'>about</a></li>
+      <li><a class='home-work' ui-sref='PortfolioParent.work' ng-click='toggleHomeMenu()'>work</a></li>
+      <li><a class='home-contact' ui-sref='PortfolioParent.contact' ng-click='toggleHomeMenu()'>contact</a></li>
     </ul>
     <div class='home-triangle'>
     </div>

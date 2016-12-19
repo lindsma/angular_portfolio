@@ -13,6 +13,7 @@
           template: '<ui-view></ui-view>'
       }).state('PortfolioParent.home', {
           url: 'home',
+          controller: 'HomeController as home',
           templateUrl: 'src/templates/home.html'
       }).state('PortfolioParent.about', {
           url: 'about',
