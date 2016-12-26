@@ -61,9 +61,9 @@ body {
     padding-right: 20px; }
     .mobile-menu a:hover {
       cursor: pointer;
-      color: red; }
+      color: #823352; }
     .mobile-menu a.close {
-      color: red; }
+      color: #823352; }
   .mobile-menu.main {
     line-height: 90px;
     height: 90px; }
@@ -86,7 +86,7 @@ body {
       display: block; } }
 
 header {
-  background: red;
+  background: #823352;
   display: flex;
   justify-content: space-between;
   height: 90px; }
@@ -140,7 +140,7 @@ header {
             font-weight: bold;
             letter-spacing: 0.1em; }
             header .nav-bar.active a:hover {
-              color: red; } }
+              color: #823352; } }
     header .nav-bar li {
       margin-left: 50px; }
       @media only screen and (max-width: 770px) {
@@ -265,7 +265,7 @@ header {
             color: white; }
         .about-container .info-container .about-description .resume a {
           text-decoration: none;
-          color: red; }
+          color: #823352; }
     .about-container .info-container img.profile {
       align-self: center;
       border-radius: 50%;
@@ -322,7 +322,7 @@ header {
         margin: 0 15px;
         height: 80px; } }
     .contact-container .contact .icon-container:hover {
-      border: 3px solid red;
+      border: 3px solid #823352;
       cursor: pointer;
       transform: scale(1.2); }
     .contact-container .contact .icon-container a {
@@ -357,7 +357,7 @@ header {
       align-self: flex-end;
       background: rgba(255, 255, 255, 0.9);
       border: 2px solid #333;
-      color: red;
+      color: #823352;
       font-family: "Montserrat", sans-serif;
       font-size: 18px;
       height: 40px;
@@ -377,7 +377,7 @@ header {
 .home-container {
   width: 100vw;
   min-height: 100vh;
-  background: red;
+  background: #823352;
   display: flex; }
   @media only screen and (max-width: 605px) {
     .home-container {
@@ -446,7 +446,7 @@ header {
           .home-container .nav .nav-list li {
             font-size: 25px; } }
         .home-container .nav .nav-list li:hover a {
-          color: red; }
+          color: #823352; }
         .home-container .nav .nav-list li:nth-of-type(2) {
           margin: 35px 0; }
           @media only screen and (max-width: 605px) {
@@ -658,7 +658,7 @@ header {
       .work-container .project-container .project-details .skills {
         position: absolute;
         line-height: 30px;
-        color: red;
+        color: #823352;
         bottom: 15px; }
         @media only screen and (max-width: 970px) {
           .work-container .project-container .project-details .skills {
